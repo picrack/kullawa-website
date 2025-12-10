@@ -17,7 +17,7 @@ nav {
     padding: 1rem 0;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
@@ -190,7 +190,11 @@ section {
 }
 
 section:nth-child(even) {
-    background: linear-gradient(135deg, #f8f9ff 0%, #e6f0ff 100%);
+    background: #FFFFFF;
+}
+
+section:nth-child(odd):not(.hero) {
+    background: #F5F5F5;
 }
 
 h2 {
@@ -210,7 +214,7 @@ h2::after {
     transform: translateX(-50%);
     width: 150px;
     height: 4px;
-    background: linear-gradient(90deg, #2C3E50, #FFD700);
+    background: linear-gradient(90deg, #C0392B, #FFD700);
     border-radius: 2px;
 }
 
@@ -225,6 +229,7 @@ h2::after {
 .about-text {
     font-size: 1.2rem;
     line-height: 2;
+    color: #2C3E50;
 }
 
 .about-text strong {
@@ -244,6 +249,10 @@ h2::after {
 .about-highlight h3 {
     color: #FFD700;
     margin-bottom: 1rem;
+}
+
+.about-highlight p {
+    color: white;
 }
 
 .about-image {
@@ -312,7 +321,7 @@ h2::after {
 
 .videos-intro p {
     font-size: 1.2rem;
-    color: #555;
+    color: #2C3E50;
 }
 
 .videos-grid {
@@ -380,6 +389,10 @@ h2::after {
     margin-bottom: 0.5rem;
 }
 
+.video-info p {
+    color: #555;
+}
+
 .video-upload-note {
     background: linear-gradient(135deg, #FFD700, #FFA500);
     color: #2C3E50;
@@ -400,7 +413,7 @@ h2::after {
     text-align: center;
     margin-bottom: 3rem;
     font-size: 1.2rem;
-    color: #555;
+    color: #2C3E50;
 }
 
 .form-group {
