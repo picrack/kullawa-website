@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Cultural KULLAWA - Donde la cultura se hace fiesta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo-nav">
+                <img src="assets/images/logo.png" alt="Logo KULLAWA">
+                <span class="logo-text">KULLAWA</span>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul id="navMenu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>KULLAWA</h1>
+            <p class="subtitle">Centro Cultural</p>
+            <p class="eslogan">"Donde la cultura se hace fiesta"</p>
+            <p>Agrupación folclórica de Talca dedicada a la diablada, tobas, caporales y danzas del norte de Chile</p>
+            <a href="#contacto" class="cta-button">¡Contáctanos!</a>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section id="nosotros">
+        <div class="section-content">
+            <h2>Sobre Nosotros</h2>
+            <div class="about-content fade-in">
+                <div class="about-text">
+                    <p><strong>Centro Cultural KULLAWA</strong> nace del amor y la pasión por preservar y difundir el rico folclore del norte de Chile en el corazón de la zona central.</p>
+                    <br>
+                    <p>Desde Talca, llevamos la alegría y el colorido de las danzas nortinas a cada escenario, manteniendo viva la tradición de la diablada, las tobas, los caporales y el salto, expresiones culturales que nos conectan con nuestras raíces ancestrales.</p>
+                    <br>
+                    <p>Cada paso, cada traje, cada movimiento es un tributo a la identidad cultural de nuestro país, una celebración de nuestra diversidad y un puente entre generaciones.</p>
+                    
+                    <div class="about-highlight">
+                        <h3>🎭 Nuestras Danzas</h3>
+                        <p><strong>Diablada:</strong> La danza más representativa del norte, con sus coloridos trajes y máscaras</p>
+                        <p><strong>Tobas:</strong> Guerreros andinos que celebran la fuerza y la tradición</p>
+                        <p><strong>Caporales:</strong> Energía pura con acrobacias y saltos espectaculares</p>
+                        <p><strong>Salto:</strong> Expresión de alegría y devoción nortina</p>
+                    </div>
+                </div>
+                <img src="assets/images/agrupacion.jpg" alt="Agrupación Kullawa" class="about-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="galeria">
+        <div class="section-content">
+            <h2>Galería</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in">
+                    <img src="assets/images/foto1.jpg" alt="Presentación Diablada">
+                    <div class="gallery-overlay">
+                        <h3>Diablada Tradicional</h3>
+                        <p>Nuestros trajes coloridos y máscaras representando la lucha entre el bien y el mal</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="assets/images/foto2.jpg" alt="Caporales">
+                    <div class="gallery-overlay">
+                        <h3>Caporales en Acción</h3>
+                        <p>La energía y fuerza de los guerreros del altiplano</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="assets/images/foto3.jpg" alt="Presentación Festival">
+                    <div class="gallery-overlay">
+                        <h3>Festival Regional</h3>
+                        <p>Representando a Talca en festivales folclóricos</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="assets/images/foto4.jpg" alt="Tobas">
+                    <div class="gallery-overlay">
+                        <h3>Danza de Tobas</h3>
+                        <p>Celebrando nuestras raíces andinas</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="assets/images/foto5.jpg" alt="Grupo completo">
+                    <div class="gallery-overlay">
+                        <h3>Familia KULLAWA</h3>
+                        <p>Unidos por la pasión del folclore nortino</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="assets/images/foto6.jpg" alt="Trajes típicos">
+                    <div class="gallery-overlay">
+                        <h3>Detalles de Vestuario</h3>
+                        <p>Cada detalle cuenta una historia de tradición</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos -->
+    <section id="videos">
+        <div class="section-content">
+            <h2>Videos</h2>
+            <div class="videos-intro">
+                <p>Conoce nuestras presentaciones y el trabajo que realizamos</p>
+            </div>
+            <div class="videos-grid">
+                <!-- Reemplaza VIDEO_ID con el ID de tu video de YouTube -->
+                <div class="video-item fade-in">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Diablada en Festival Regional</h3>
+                        <p>Nuestra última presentación en el festival de Talca</p>
+                    </div>
+                </div>
+                <div class="video-item fade-in">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Energía de los Caporales</h3>
+                        <p>Acrobacias y saltos espectaculares</p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-upload-note">
+                <p>📹 Instrucciones para agregar videos:</p>
+                <p style="margin-top: 0.5rem;">Sube tus videos a YouTube y reemplaza "VIDEO_ID" con el ID real del video</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+        <div class="section-content">
+            <h2>Contacto</h2>
+            <div class="contact-container fade-in">
+                <div class="contact-intro">
+                    <p>¿Quieres contratar a KULLAWA para tu evento?</p>
+                    <p>¿Te gustaría unirte a nuestra agrupación?</p>
+                    <p><strong>¡Escríbenos y conversemos!</strong></p>
+                </div>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo *</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico *</label>
+                        <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="+56 9 1234 5678">
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" required placeholder="Cuéntanos sobre tu evento o consulta..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p class="footer-highlight">Centro Cultural KULLAWA</p>
+        <p>"Donde la cultura se hace fiesta"</p>
+        <p>Talca, Región del Maule - Chile</p>
+        <p>Folclore del Norte Grande en el corazón de la Zona Central</p>
+        <p style="margin-top: 1rem;">&copy; 2024 Centro Cultural KULLAWA. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
