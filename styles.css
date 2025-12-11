@@ -174,6 +174,80 @@ nav a:hover {
     100% { opacity: 0; top: 30px; }
 }
 
+/* Modo Oscuro */
+body.dark-mode {
+    background: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.dark-mode section:nth-child(even) {
+    background: #2C2C2C;
+}
+
+body.dark-mode section:nth-child(odd):not(.hero) {
+    background: #222;
+}
+
+body.dark-mode .about-text,
+body.dark-mode .contact-intro,
+body.dark-mode .videos-intro p {
+    color: #e0e0e0;
+}
+
+body.dark-mode .gallery-item,
+body.dark-mode .video-item,
+body.dark-mode .evento-card {
+    background: #2C2C2C;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+    background: #2C2C2C;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+/* Botón Toggle Tema */
+.theme-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(20deg);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    color: #FFD700;
+}
+
+.sun-icon {
+    display: block;
+}
+
+.moon-icon {
+    display: none;
+}
+
+body.dark-mode .sun-icon {
+    display: none;
+}
+
+body.dark-mode .moon-icon {
+    display: block;
+}
+
 /* Secciones con altura completa */
 section {
     min-height: 100vh;
@@ -629,4 +703,113 @@ footer p {
     nav ul.active {
         display: flex;
     }
+
+    /* Próximas Presentaciones */
+.eventos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.evento-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.evento-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.evento-fecha {
+    background: linear-gradient(135deg, #C0392B, #E74C3C);
+    color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    min-width: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.evento-fecha .dia {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.evento-fecha .mes {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+
+.evento-info h3 {
+    color: #2C3E50;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.evento-lugar,
+.evento-hora {
+    color: #555;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+    /* Botón WhatsApp Flotante */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25D366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+    z-index: 999;
+    transition: all 0.3s;
+    animation: pulse-whatsapp 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.7);
+}
+
+.whatsapp-float svg {
+    width: 35px;
+    height: 35px;
+}
+
+@keyframes pulse-whatsapp {
+    0% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+    }
+    50% {
+        box-shadow: 0 4px 30px rgba(37, 211, 102, 0.8);
+    }
+    100% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+    }
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+    }
+}
 }

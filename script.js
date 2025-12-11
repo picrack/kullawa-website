@@ -36,29 +36,26 @@ document.querySelectorAll('.fade-in').forEach(element => {
     observer.observe(element);
 });
 
-// Manejo del formulario
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Aquí conectaremos el formulario a un servicio real más adelante
-    const formData = {
-        nombre: document.getElementById('nombre').value,
-        email: document.getElementById('email').value,
-        telefono: document.getElementById('telefono').value,
-        mensaje: document.getElementById('mensaje').value
-    };
-    
-    alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.\n\n' +
-          'Por ahora este es un formulario de prueba. Más adelante lo conectaremos a un servicio real.');
-    
-    this.reset();
-});
-
 // Efecto parallax suave en hero
 window.addEventListener('scroll', function() {
     const hero = document.querySelector('.hero');
     const scrolled = window.pageYOffset;
     if (hero && scrolled < window.innerHeight) {
         hero.style.transform = 'translateY(' + (scrolled * 0.5) + 'px)';
+    }
+});
+
+// Modo Oscuro
+function toggleTheme() {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+}
+
+// Cargar preferencia guardada
+window.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
     }
 });
