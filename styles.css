@@ -253,6 +253,12 @@ h2::after {
 
 .about-highlight p {
     color: white;
+    margin: 0.5rem 0;
+}
+
+.about-highlight p strong {
+    color: #FFD700;
+    font-weight: bold;
 }
 
 .about-image {
