@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro Cultural KULLAWA - Donde la cultura se hace fiesta</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- SEO Básico -->
     <meta name="description" content="Centro Cultural KULLAWA - Agrupación folclórica de Talca dedicada a la diablada, tobas, caporales y danzas del norte de Chile. Donde la cultura se hace fiesta.">
     <meta name="keywords" content="kullawa, centro cultural, folclore chileno, talca, diablada, tobas, caporales, danzas nortinas, folclore norte, agrupación folclórica">
@@ -22,25 +23,15 @@
     <meta name="twitter:description" content="Donde la cultura se hace fiesta">
     <meta name="twitter:image" content="https://picrack.github.io/kullawa-website/assets/images/logo.jpg">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
     <!-- Navegación -->
     <nav>
         <div class="nav-container">
             <div class="logo-nav">
-                <img src="assets/images/logo.png" alt="Logo KULLAWA">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23C0392B' stroke='%23FFD700' stroke-width='3'/%3E%3Ctext x='50' y='62' text-anchor='middle' font-size='28' fill='%23FFD700' font-weight='bold' font-family='Georgia'%3EK%3C/text%3E%3C/svg%3E" alt="Logo KULLAWA">
                 <span class="logo-text">KULLAWA</span>
             </div>
-
-            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Cambiar tema">
-                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/>
-                </svg>
-                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/>
-                </svg>
-            </button>
 
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul id="navMenu">
@@ -51,6 +42,15 @@
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </div>
+
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Cambiar tema">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/>
+                </svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/>
+                </svg>
+            </button>
     </nav>
 
     <!-- Hero Banner -->
@@ -220,62 +220,44 @@
 </section>
 
     <!-- Contacto -->
-    <section id="contacto">
-        <div class="section-content">
-            <h2>Contacto</h2>
-            <div class="contact-container fade-in">
-                <div class="contact-intro">
-                    <p>¿Quieres contratar a KULLAWA para tu evento?</p>
-                    <p>¿Te gustaría unirte a nuestra agrupación?</p>
-                    <p><strong>¡Escríbenos y conversemos!</strong></p>
-                </div>
-<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-    <input type="hidden" name="form-name" value="contact">
-    
-    <!-- Campo oculto anti-spam -->
-    <div style="display: none;">
-        <label>No llenar este campo: <input name="bot-field"></label>
-    </div>
-    
-    <div class="form-group">
-        <label for="nombre">Nombre Completo *</label>
-        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
-    </div>
-    <div class="form-group">
-        <label for="email">Correo Electrónico *</label>
-        <input type="email" id="email" name="email" required placeholder="tu@email.com">
-    </div>
-    <div class="form-group">
-        <label for="telefono">Teléfono</label>
-        <input type="tel" id="telefono" name="telefono" placeholder="+56 9 1234 5678">
-    </div>
-    <div class="form-group">
-        <label for="mensaje">Mensaje *</label>
-        <textarea id="mensaje" name="mensaje" required placeholder="Cuéntanos sobre tu evento o consulta..."></textarea>
-    </div>
-    <button type="submit" class="submit-btn">Enviar Mensaje</button>
-</form>
-                    <div class="form-group">
-                        <label for="nombre">Nombre Completo *</label>
-                        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Correo Electrónico *</label>
-                        <input type="email" id="email" name="email" required placeholder="tu@email.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="telefono">Teléfono</label>
-                        <input type="tel" id="telefono" name="telefono" placeholder="+56 9 1234 5678">
-                    </div>
-                    <div class="form-group">
-                        <label for="mensaje">Mensaje *</label>
-                        <textarea id="mensaje" name="mensaje" required placeholder="Cuéntanos sobre tu evento o consulta..."></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Enviar Mensaje</button>
-                </form>
+<section id="contacto">
+    <div class="section-content">
+        <h2>Contacto</h2>
+        <div class="contact-container fade-in">
+            <div class="contact-intro">
+                <p>¿Quieres contratar a KULLAWA para tu evento?</p>
+                <p>¿Te gustaría unirte a nuestra agrupación?</p>
+                <p><strong>¡Escríbenos y conversemos!</strong></p>
             </div>
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="contact">
+                
+                <!-- Campo oculto anti-spam -->
+                <div style="display: none;">
+                    <label>No llenar este campo: <input name="bot-field"></label>
+                </div>
+                
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo *</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico *</label>
+                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+56 9 1234 5678">
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje *</label>
+                    <textarea id="mensaje" name="mensaje" required placeholder="Cuéntanos sobre tu evento o consulta..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Enviar Mensaje</button>
+            </form>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer>
@@ -314,7 +296,7 @@
         <p style="margin-top: 2rem;">&copy; 2024 Centro Cultural KULLAWA. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="script.js"></script>
+    
 
 <!-- Botón WhatsApp Flotante -->
 <a href="https://wa.me/56912345678?text=Hola%20KULLAWA,%20me%20gustaría%20más%20información" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
@@ -323,5 +305,6 @@
     </svg>
 </a>
 
+<script src="script.js"></script>
 </body>
 </html>
