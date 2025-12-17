@@ -198,6 +198,9 @@ body.dark-mode .moon-icon {
     font-size: 1.2rem;
     transition: all 0.3s;
     box-shadow: 0 5px 20px rgba(255, 140, 0, 0.4);
+    position: sticky;
+    top: 70vh;
+    z-index: 50;
 }
 
 .cta-button:hover {
