@@ -134,6 +134,30 @@ body.dark-mode .moon-icon {
     max-width: 800px;
 }
 
+/* Logo flotante en el Hero */
+.hero-logo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #FFA500;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 40px rgba(255, 165, 0, 0.5);
+    animation: float 3s ease-in-out infinite;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0);
+    }
+    50% { 
+        transform: translateY(-15px);
+    }
+}
+
 .hero h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
@@ -725,6 +749,11 @@ body.dark-mode .video-info p {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .hero-logo {
+        width: 150px;
+        height: 150px;
+    }
+
     .hero h1 {
         font-size: 2.5rem;
     }
