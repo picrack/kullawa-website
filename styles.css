@@ -43,12 +43,27 @@ nav {
     border-radius: 50%;
     border: 2px solid #FFD700;
     object-fit: cover;
+    background: white;
+}
+
+.logo-text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-subtitle {
+    color: #FFA500;
+    font-size: 0.75rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .logo-text {
     color: white;
     font-weight: bold;
     font-size: 1.2rem;
+    line-height: 1;
 }
 
 nav ul {
