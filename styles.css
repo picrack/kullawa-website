@@ -710,6 +710,10 @@ body.dark-mode section:nth-child(odd):not(.hero) {
     background: #222;
 }
 
+body.dark-mode h2 {
+    color: #FFA500;
+}
+
 body.dark-mode .about-text,
 body.dark-mode .contact-intro,
 body.dark-mode .videos-intro p {
@@ -727,6 +731,10 @@ body.dark-mode .form-group textarea {
     background: #2C2C2C;
     color: #e0e0e0;
     border-color: #555;
+}
+
+body.dark-mode .form-group label {
+    color: #FFA500;
 }
 
 body.dark-mode .evento-info h3,
