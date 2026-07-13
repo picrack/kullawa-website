@@ -214,7 +214,7 @@ body.dark-mode .moon-icon {
     transition: all 0.3s;
     box-shadow: 0 5px 20px rgba(255, 140, 0, 0.4);
     position: sticky;
-    top: 45vh;
+    top: 25vh;
     z-index: 50;
 }
 
