@@ -34,7 +34,7 @@
                 <img src="assets/images/logo.png" alt="Logo Kullawa">
                 <div class="logo-text-container">
                     <span class="logo-subtitle">Centro Cultural</span>
-                    <span class="logo-text">Kullawa</span>
+                    <span class="logo-text">Kullawa/span>
                 </div>
             </div>
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
@@ -120,8 +120,8 @@
                 <div class="gallery-item fade-in">
                     <img src="assets/images/foto3.jpg" alt="Presentación Festival">
                     <div class="gallery-overlay">
-                        <h3>Festival Regional</h3>
-                        <p>Representando a Talca en festivales folclóricos</p>
+                        <h3>Fiesta del Chancho - Talca 2025</h3>
+                        <p>Presentación del Centro Cultural Kullawa en el escenario principal de la fiesta</p>
                     </div>
                 </div>
                 <div class="gallery-item fade-in">
@@ -134,7 +134,7 @@
                 <div class="gallery-item fade-in">
                     <img src="assets/images/foto5.jpeg" alt="Grupo completo">
                     <div class="gallery-overlay">
-                        <h3>Familia Kullawa</h3>
+                        <h3>Familia Kullawa/h3>
                         <p>Unidos por la pasión del folclore nortino</p>
                     </div>
                 </div>
@@ -172,7 +172,7 @@
                     </div>
                     <div class="video-info">
                         <h3>Fiesta de la Virgen del Carmen 2025</h3>
-                        <p>Fiesta organizada por KULLAWA en Talca</p>
+                        <p>Fiesta organizada por Kullawa en Talca</p>
                     </div>
                 </div>
             </div>
@@ -232,6 +232,9 @@
                     </div>
                     <button type="submit" class="submit-btn">Enviar Mensaje</button>
                 </form>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps?q=Plaza%20de%20Armas%2C%20Talca%2C%20Chile&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
     </section>
@@ -285,6 +288,18 @@
             <path d="M12 4l-8 8h5v8h6v-8h5z"/>
         </svg>
     </button>
+
+    <!-- Lightbox Galería -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close">×</button>
+        <img src="" alt="" id="lightbox-img">
+    </div>
+
+    <!-- Aviso de Cookies -->
+    <div class="cookie-banner" id="cookieBanner">
+        <p>Este sitio usa cookies básicas para mejorar tu experiencia de navegación. Al continuar, aceptas su uso.</p>
+        <button class="cookie-accept-btn" onclick="acceptCookies()">Entendido</button>
+    </div>
 
     <script src="script.js"></script>
 </body>
