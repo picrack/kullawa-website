@@ -53,14 +53,6 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     
     this.reset();
 });
-
-// Efecto parallax suave en hero
-window.addEventListener('scroll', function() {
-    const hero = document.querySelector('.hero');
-    const scrolled = window.pageYOffset;
-    if (hero && scrolled < window.innerHeight) {
-        hero.style.transform = 'translateY(' + (scrolled * 0.5) + 'px)';
-    }
 // Modo Oscuro
 function toggleTheme() {
     document.body.classList.toggle('dark-mode');
@@ -74,5 +66,5 @@ window.addEventListener('DOMContentLoaded', () => {
     if (savedTheme === 'dark') {
         document.body.classList.add('dark-mode');
     }
-
+});
 });
