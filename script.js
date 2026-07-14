@@ -61,4 +61,18 @@ window.addEventListener('scroll', function() {
     if (hero && scrolled < window.innerHeight) {
         hero.style.transform = 'translateY(' + (scrolled * 0.5) + 'px)';
     }
+// Modo Oscuro
+function toggleTheme() {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+}
+
+// Cargar preferencia guardada
+window.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+    }
+
 });
