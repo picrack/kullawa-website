@@ -1,10 +1,15 @@
 // Navegación suave
 document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', function(e) {
-        e.preventDefault();
         const targetId = this.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-        targetSection.scrollIntoView({ behavior: 'smooth' });
+
+        if (targetId.startsWith('#')) {
+            e.preventDefault();
+            const targetSection = document.querySelector(targetId);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
 
         if (window.innerWidth <= 768) {
             document.getElementById('navMenu').classList.remove('active');
@@ -148,3 +153,34 @@ function acceptCookies() {
     localStorage.setItem('cookiesAccepted', 'true');
     document.getElementById('cookieBanner').classList.remove('visible');
 }
+
+// Countdown eventos
+function updateCountdowns() {
+    document.querySelectorAll('.countdown').forEach(el => {
+        const target = new Date(el.getAttribute('data-target')).getTime();
+        const now = new Date().getTime();
+        const diff = target - now;
+
+        if (diff <= 0 && diff > -86400000) {
+            el.outerHTML = '<div class="countdown-today">¡Es hoy! 🎉</div>';
+            return;
+        }
+        if (diff <= -86400000) {
+            el.style.display = 'none';
+            return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+        el.innerHTML = `
+            <div class="countdown-unit"><span class="num">${days}</span><span class="label">Días</span></div>
+            <div class="countdown-unit"><span class="num">${hours}</span><span class="label">Hrs</span></div>
+            <div class="countdown-unit"><span class="num">${mins}</span><span class="label">Min</span></div>
+        `;
+    });
+}
+
+updateCountdowns();
+setInterval(updateCountdowns, 60000);
