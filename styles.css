@@ -421,9 +421,20 @@ h2::after {
 
 .gallery-item img {
     width: 100%;
-    height: 350px;
+    height: 280px;
     object-fit: cover;
     display: block;
+}
+
+.gallery-caption {
+    padding: 1rem 1.2rem;
+    background: white;
+}
+
+.gallery-caption h3 {
+    color: #2C3E50;
+    font-size: 1.1rem;
+    margin: 0;
 }
 
 .gallery-overlay {
@@ -431,7 +442,7 @@ h2::after {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(transparent, rgba(44, 62, 80, 0.95));
+    background: linear-gradient(transparent, rgba(44, 62, 80, 0.97));
     padding: 1.5rem;
     color: white;
     transform: translateY(100%);
@@ -445,6 +456,115 @@ h2::after {
 
 .gallery-item:hover .gallery-overlay {
     transform: translateY(0);
+}
+
+/* Footer nuevo */
+footer {
+    background: linear-gradient(160deg, #1B2631, #2C3E50 45%, #34495E);
+    color: white;
+    padding: 4rem 2rem 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.2fr 1fr;
+    gap: 2.5rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    text-align: left;
+}
+
+.footer-col h4 {
+    color: #FFA500;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #FFA500;
+    background: white;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.footer-brand .footer-highlight {
+    color: #FFD700;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin: 0 0 0.3rem;
+}
+
+.footer-eslogan {
+    color: #cbd5e1;
+    font-style: italic;
+    margin: 0;
+}
+
+.footer-links,
+.footer-contact {
+    list-style: none;
+}
+
+.footer-links li,
+.footer-contact li {
+    margin-bottom: 0.8rem;
+    color: #cbd5e1;
+    font-size: 0.98rem;
+}
+
+.footer-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #FFA500;
+}
+
+.footer-col .social-icons {
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-whatsapp-link {
+    display: inline-block;
+    color: #25D366;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.footer-whatsapp-link:hover {
+    color: #FFA500;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+    color: #a0aec0;
 }
 
 /* Videos */
@@ -566,6 +686,165 @@ h2::after {
     font-size: 1.1rem;
 }
 
+.countdown {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.8rem;
+}
+
+.countdown-unit {
+    background: #2C3E50;
+    color: white;
+    border-radius: 8px;
+    padding: 0.5rem 0.8rem;
+    text-align: center;
+    min-width: 55px;
+}
+
+.countdown-unit .num {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #FFA500;
+}
+
+.countdown-unit .label {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+
+.countdown-today {
+    margin-top: 1rem;
+    background: linear-gradient(135deg, #C0392B, #E74C3C);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* Compartir */
+.share-block {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.share-block p {
+    color: #2C3E50;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.share-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.share-icons a {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+.share-icons a:hover {
+    transform: translateY(-4px);
+}
+
+.share-icons svg {
+    width: 22px;
+    height: 22px;
+}
+
+.share-whatsapp {
+    background: #25D366;
+}
+
+.share-facebook {
+    background: #1877F2;
+}
+
+/* Botón Ver Galería Completa */
+.gallery-cta {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.gallery-full-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #2C3E50, #34495E);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 5px 20px rgba(44, 62, 80, 0.3);
+}
+
+.gallery-full-btn:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #FFA500, #FF8C00);
+    color: #2C3E50;
+}
+
+/* Página Galería Completa */
+.gallery-page-header {
+    background: linear-gradient(135deg, #2C3E50, #34495E);
+    min-height: 40vh;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    padding-top: 4rem;
+}
+
+.back-home-link {
+    color: #FFA500;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    transition: color 0.3s;
+}
+
+.back-home-link:hover {
+    color: #FFD700;
+}
+
+.gallery-page-title {
+    font-size: 3rem;
+    color: #FFA500;
+    margin-bottom: 1rem;
+}
+
+.gallery-page-subtitle {
+    font-size: 1.2rem;
+    color: white;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.gallery-category {
+    min-height: auto;
+    padding: 3rem 2rem;
+}
+
+.gallery-note {
+    text-align: center;
+    margin-top: 2rem;
+    color: #666;
+    font-style: italic;
+}
+
+body.dark-mode .gallery-note {
+    color: #aaa;
+}
+
 /* Formulario de Contacto */
 .contact-container {
     max-width: 700px;
@@ -637,32 +916,9 @@ h2::after {
 
 /* Footer */
 footer {
-    background: linear-gradient(135deg, #2C3E50, #34495E);
+    background: linear-gradient(160deg, #1B2631, #2C3E50 45%, #34495E);
     color: white;
-    text-align: center;
-    padding: 3rem 2rem;
-}
-
-footer p {
-    margin: 0.5rem 0;
-    font-size: 1.1rem;
-}
-
-.footer-highlight {
-    color: #FFD700;
-    font-weight: bold;
-    font-size: 1.3rem;
-}
-
-/* Redes Sociales */
-.social-media {
-    margin: 2rem 0;
-}
-
-.social-media h3 {
-    color: #FFD700;
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
+    padding: 4rem 2rem 0;
 }
 
 .social-icons {
