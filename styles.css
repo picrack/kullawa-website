@@ -427,14 +427,25 @@ h2::after {
 }
 
 .gallery-caption {
-    padding: 1rem 1.2rem;
+    padding: 1.1rem 1rem;
     background: white;
+    text-align: center;
 }
 
 .gallery-caption h3 {
     color: #2C3E50;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+    font-weight: 600;
     margin: 0;
+    letter-spacing: 0.3px;
+}
+
+body.dark-mode .gallery-caption {
+    background: #2C2C2C;
+}
+
+body.dark-mode .gallery-caption h3 {
+    color: #FFA500;
 }
 
 .gallery-overlay {
