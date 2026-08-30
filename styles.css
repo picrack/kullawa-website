@@ -872,6 +872,14 @@ footer {
     background: #1877F2;
 }
 
+.share-instagram {
+    background: #E4405F;
+}
+
+.share-tiktok {
+    background: #000000;
+}
+
 /* Botón Ver Galería Completa */
 .gallery-cta {
     text-align: center;
