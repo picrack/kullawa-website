@@ -20,7 +20,7 @@ h1, h2, h3,
 
 /* Navegación */
 nav {
-    background: linear-gradient(135deg, #2C3E50, #34495E);
+    background: linear-gradient(135deg, #16294D, #24406E);
     padding: 1rem 0;
     position: sticky;
     top: 0;
@@ -101,7 +101,7 @@ nav a {
 
 nav a:hover {
     background-color: #FFD700;
-    color: #2C3E50;
+    color: #16294D;
 }
 
 nav a.active-link {
@@ -151,10 +151,11 @@ body.dark-mode .moon-icon {
     display: block;
 }
 
-/* Hero / Banner Principal */
+/* Hero / Banner Principal - degradado propio, sin foto de stock */
 .hero {
-    background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(52, 73, 94, 0.75)),
-                url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=1600') center/cover !important;
+    background:
+        radial-gradient(circle at 50% 22%, rgba(255, 215, 0, 0.12), transparent 55%),
+        linear-gradient(160deg, #0F1F3D 0%, #16294D 45%, #24406E 100%) !important;
     min-height: 130vh;
     display: flex;
     flex-direction: column;
@@ -224,7 +225,7 @@ body.dark-mode .moon-icon {
 .hero .eslogan {
     font-size: 1.8rem;
     font-style: italic;
-    color: #FFA500 !important;
+    color: #FFD700 !important;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     margin-bottom: 2rem;
 }
@@ -235,7 +236,7 @@ body.dark-mode .moon-icon {
     color: #FFFFFF !important;
 }
 
-/* Wrapper del botón CTA - le da espacio real dentro del Hero */
+/* Wrapper del botón CTA */
 .cta-wrapper {
     width: 100%;
     display: flex;
@@ -247,15 +248,15 @@ body.dark-mode .moon-icon {
 
 .cta-button {
     display: inline-block;
-    background: linear-gradient(135deg, #FFA500, #FF8C00);
-    color: #2C3E50;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #16294D;
     padding: 1rem 3rem;
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2rem;
     transition: all 0.3s;
-    box-shadow: 0 5px 20px rgba(255, 140, 0, 0.4);
+    box-shadow: 0 5px 20px rgba(255, 165, 0, 0.4);
     position: sticky;
     top: 40vh;
     z-index: 50;
@@ -263,8 +264,8 @@ body.dark-mode .moon-icon {
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255, 140, 0, 0.6);
-    background: linear-gradient(135deg, #FF8C00, #FF6B00);
+    box-shadow: 0 8px 25px rgba(255, 165, 0, 0.6);
+    background: linear-gradient(135deg, #FFA500, #FF8C00);
 }
 
 .scroll-indicator {
@@ -333,7 +334,7 @@ section:nth-child(odd):not(.hero) {
 
 h2 {
     font-size: 3rem;
-    color: #2C3E50;
+    color: #16294D;
     margin-bottom: 3rem;
     text-align: center;
     position: relative;
@@ -364,7 +365,7 @@ h2::after {
 .about-text {
     font-size: 1.2rem;
     line-height: 2;
-    color: #2C3E50;
+    color: #16294D;
 }
 
 .about-text strong {
@@ -425,7 +426,7 @@ body.dark-mode .stat-label {
 .cuadros-title {
     text-align: center;
     font-size: 1.8rem;
-    color: #2C3E50;
+    color: #16294D;
     margin-top: 3rem;
     margin-bottom: 2rem;
 }
@@ -466,12 +467,12 @@ body.dark-mode .cuadros-title {
 }
 
 .cuadro-1 { background: linear-gradient(135deg, #C0392B, #E74C3C); }
-.cuadro-2 { background: linear-gradient(135deg, #2C3E50, #34495E); }
-.cuadro-3 { background: linear-gradient(135deg, #FFA500, #FF8C00); color: #2C3E50; }
-.cuadro-4 { background: linear-gradient(135deg, #8E44AD, #9B59B6); }
-.cuadro-5 { background: linear-gradient(135deg, #16A085, #1ABC9C); }
-.cuadro-6 { background: linear-gradient(135deg, #D35400, #E67E22); }
-.cuadro-7 { background: linear-gradient(135deg, #34495E, #2C3E50); }
+.cuadro-2 { background: linear-gradient(135deg, #16294D, #24406E); }
+.cuadro-3 { background: linear-gradient(135deg, #FFD700, #FFA500); color: #16294D; }
+.cuadro-4 { background: linear-gradient(135deg, #6C3483, #8E44AD); }
+.cuadro-5 { background: linear-gradient(135deg, #148F77, #1ABC9C); }
+.cuadro-6 { background: linear-gradient(135deg, #B9770E, #E67E22); }
+.cuadro-7 { background: linear-gradient(135deg, #24406E, #16294D); }
 
 /* Galería */
 .gallery-grid {
@@ -508,7 +509,7 @@ body.dark-mode .cuadros-title {
 }
 
 .gallery-caption h3 {
-    color: #2C3E50;
+    color: #16294D;
     font-size: 1.05rem;
     font-weight: 600;
     margin: 0;
@@ -528,7 +529,7 @@ body.dark-mode .gallery-caption h3 {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(transparent, rgba(44, 62, 80, 0.97));
+    background: linear-gradient(transparent, rgba(22, 41, 77, 0.97));
     padding: 1.5rem;
     color: white;
     transform: translateY(100%);
@@ -546,7 +547,7 @@ body.dark-mode .gallery-caption h3 {
 
 /* Footer */
 footer {
-    background: linear-gradient(160deg, #1B2631, #2C3E50 45%, #34495E);
+    background: linear-gradient(160deg, #0F1F3D, #16294D 45%, #24406E);
     color: white;
     padding: 4rem 2rem 0;
 }
@@ -686,7 +687,7 @@ footer {
 }
 
 .social-icons a:hover svg {
-    color: #2C3E50;
+    color: #16294D;
 }
 
 /* Videos */
@@ -697,7 +698,7 @@ footer {
 
 .videos-intro p {
     font-size: 1.2rem;
-    color: #2C3E50;
+    color: #16294D;
 }
 
 .videos-grid {
@@ -724,7 +725,7 @@ footer {
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
-    background: #2C3E50;
+    background: #16294D;
 }
 
 .video-container iframe {
@@ -740,7 +741,7 @@ footer {
 }
 
 .video-info h3 {
-    color: #2C3E50;
+    color: #16294D;
     margin-bottom: 0.5rem;
 }
 
@@ -796,7 +797,7 @@ footer {
 }
 
 .evento-info h3 {
-    color: #2C3E50;
+    color: #16294D;
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
@@ -815,7 +816,7 @@ footer {
 }
 
 .countdown-unit {
-    background: #2C3E50;
+    background: #16294D;
     color: white;
     border-radius: 8px;
     padding: 0.5rem 0.8rem;
@@ -827,7 +828,7 @@ footer {
     display: block;
     font-size: 1.4rem;
     font-weight: bold;
-    color: #FFA500;
+    color: #FFD700;
 }
 
 .countdown-unit .label {
@@ -891,20 +892,20 @@ footer {
 
 .calendar-full-btn {
     display: inline-block;
-    background: linear-gradient(135deg, #2C3E50, #34495E);
+    background: linear-gradient(135deg, #16294D, #24406E);
     color: white;
     padding: 1rem 2.5rem;
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
     transition: all 0.3s;
-    box-shadow: 0 5px 20px rgba(44, 62, 80, 0.3);
+    box-shadow: 0 5px 20px rgba(22, 41, 77, 0.3);
 }
 
 .calendar-full-btn:hover {
     transform: translateY(-3px);
-    background: linear-gradient(135deg, #FFA500, #FF8C00);
-    color: #2C3E50;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #16294D;
 }
 
 /* Compartir */
@@ -914,7 +915,7 @@ footer {
 }
 
 .share-block p {
-    color: #2C3E50;
+    color: #16294D;
     margin-bottom: 1rem;
     font-weight: bold;
 }
@@ -968,25 +969,25 @@ footer {
 
 .gallery-full-btn {
     display: inline-block;
-    background: linear-gradient(135deg, #2C3E50, #34495E);
+    background: linear-gradient(135deg, #16294D, #24406E);
     color: white;
     padding: 1rem 2.5rem;
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
     transition: all 0.3s;
-    box-shadow: 0 5px 20px rgba(44, 62, 80, 0.3);
+    box-shadow: 0 5px 20px rgba(22, 41, 77, 0.3);
 }
 
 .gallery-full-btn:hover {
     transform: translateY(-3px);
-    background: linear-gradient(135deg, #FFA500, #FF8C00);
-    color: #2C3E50;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #16294D;
 }
 
 /* Página Galería Completa / Calendario Completo (encabezado compartido) */
 .gallery-page-header {
-    background: linear-gradient(135deg, #2C3E50, #34495E);
+    background: linear-gradient(135deg, #16294D, #24406E);
     min-height: 40vh;
     color: white;
     text-align: center;
@@ -995,7 +996,7 @@ footer {
 }
 
 .back-home-link {
-    color: #FFA500;
+    color: #FFD700;
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
@@ -1004,12 +1005,12 @@ footer {
 }
 
 .back-home-link:hover {
-    color: #FFD700;
+    color: #FFA500;
 }
 
 .gallery-page-title {
     font-size: 3rem;
-    color: #FFA500;
+    color: #FFD700;
     margin-bottom: 1rem;
 }
 
@@ -1046,7 +1047,7 @@ body.dark-mode .gallery-note {
     text-align: center;
     margin-bottom: 3rem;
     font-size: 1.2rem;
-    color: #2C3E50;
+    color: #16294D;
 }
 
 .form-group {
@@ -1056,7 +1057,7 @@ body.dark-mode .gallery-note {
 .form-group label {
     display: block;
     margin-bottom: 0.8rem;
-    color: #2C3E50;
+    color: #16294D;
     font-weight: bold;
     font-size: 1.1rem;
 }
@@ -1065,7 +1066,7 @@ body.dark-mode .gallery-note {
 .form-group textarea {
     width: 100%;
     padding: 1rem;
-    border: 3px solid #2C3E50;
+    border: 3px solid #16294D;
     border-radius: 10px;
     font-size: 1rem;
     font-family: inherit;
@@ -1101,8 +1102,8 @@ body.dark-mode .gallery-note {
 .submit-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(192, 57, 43, 0.6);
-    background: linear-gradient(135deg, #FFA500, #FF8C00);
-    color: #2C3E50;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #16294D;
 }
 
 /* Botón WhatsApp Flotante */
@@ -1144,8 +1145,8 @@ body.dark-mode .gallery-note {
     position: fixed;
     bottom: 30px;
     right: 100px;
-    background: linear-gradient(135deg, #FFA500, #FF8C00);
-    color: #2C3E50;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #16294D;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -1153,7 +1154,7 @@ body.dark-mode .gallery-note {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 20px rgba(255, 140, 0, 0.5);
+    box-shadow: 0 4px 20px rgba(255, 165, 0, 0.5);
     z-index: 999;
     cursor: pointer;
     transition: all 0.3s;
@@ -1170,7 +1171,7 @@ body.dark-mode .gallery-note {
 
 .back-to-top:hover {
     transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 6px 25px rgba(255, 140, 0, 0.7);
+    box-shadow: 0 6px 25px rgba(255, 165, 0, 0.7);
 }
 
 .back-to-top svg {
@@ -1209,7 +1210,7 @@ body.dark-mode .gallery-note {
     top: 20px;
     right: 30px;
     background: rgba(255, 255, 255, 0.1);
-    border: 2px solid #FFA500;
+    border: 2px solid #FFD700;
     color: white;
     width: 45px;
     height: 45px;
@@ -1223,8 +1224,8 @@ body.dark-mode .gallery-note {
 }
 
 .lightbox-close:hover {
-    background: #FFA500;
-    color: #2C3E50;
+    background: #FFD700;
+    color: #16294D;
 }
 
 /* Mapa Google */
@@ -1248,7 +1249,7 @@ body.dark-mode .gallery-note {
     bottom: -200px;
     left: 0;
     right: 0;
-    background: #2C3E50;
+    background: #16294D;
     color: white;
     padding: 1.5rem 2rem;
     display: flex;
@@ -1273,8 +1274,8 @@ body.dark-mode .gallery-note {
 }
 
 .cookie-accept-btn {
-    background: linear-gradient(135deg, #FFA500, #FF8C00);
-    color: #2C3E50;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #16294D;
     border: none;
     padding: 0.7rem 2rem;
     border-radius: 25px;
