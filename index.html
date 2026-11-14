@@ -90,18 +90,48 @@
 
     <!-- Hero Banner -->
     <section id="inicio" class="hero">
-        <div class="hero-content">
-            <img src="assets/images/logo.png" alt="Logo KULLAWA" class="hero-logo">
-            <h1>KULLAWA</h1>
-            <p class="subtitle">Centro Cultural</p>
-            <p class="eslogan">"Donde la cultura se hace fiesta"</p>
-            <p>Centro cultural folclórico de la ciudad de Talca dedicada a las danzas del norte de Chile. Como la diablada, tobas, gitanas y caporales.</p>
+        <div class="hero-band" aria-hidden="true"></div>
+
+        <div class="hero-particles" aria-hidden="true">
+            <span style="--x:6%;--s:10px;--c:#FFD700;--t:14s;--d:0s"></span>
+            <span style="--x:14%;--s:7px;--c:#E74C3C;--t:18s;--d:3s"></span>
+            <span style="--x:23%;--s:12px;--c:#8E44AD;--t:16s;--d:6s"></span>
+            <span style="--x:31%;--s:8px;--c:#FFFFFF;--t:20s;--d:1s"></span>
+            <span style="--x:40%;--s:10px;--c:#FFA500;--t:15s;--d:8s"></span>
+            <span style="--x:49%;--s:6px;--c:#2E86DE;--t:19s;--d:4s"></span>
+            <span style="--x:57%;--s:11px;--c:#FFD700;--t:17s;--d:10s"></span>
+            <span style="--x:66%;--s:8px;--c:#E74C3C;--t:21s;--d:2s"></span>
+            <span style="--x:74%;--s:10px;--c:#FFFFFF;--t:15s;--d:7s"></span>
+            <span style="--x:82%;--s:7px;--c:#8E44AD;--t:18s;--d:12s"></span>
+            <span style="--x:90%;--s:12px;--c:#FFA500;--t:16s;--d:5s"></span>
+            <span style="--x:96%;--s:8px;--c:#2E86DE;--t:22s;--d:9s"></span>
         </div>
-        <div class="cta-wrapper">
-            <a href="#contacto" class="cta-button">¡Contáctanos!</a>
+
+        <div class="hero-inner">
+            <div class="hero-text">
+                <p class="hero-kicker">Folclore del norte · Talca, Chile · Desde 2016</p>
+                <h1>KULLAWA</h1>
+                <p class="subtitle">Centro Cultural</p>
+                <p class="eslogan">"Donde la cultura se hace fiesta"</p>
+                <p class="hero-desc">Centro cultural folclórico de Talca dedicado a las danzas del norte de Chile: diablada, tobas, gitanas, caporales y más.</p>
+                <div class="hero-buttons">
+                    <a href="#contacto" class="cta-button">¡Contáctanos!</a>
+                    <a href="calendario.html" class="cta-secondary">📅 Próximas presentaciones</a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-sun" aria-hidden="true"></div>
+                <div class="hero-logo-ring">
+                    <img src="assets/images/logo.png" alt="Logo KULLAWA" class="hero-logo">
+                </div>
+            </div>
         </div>
-        <div class="scroll-indicator">
-            <span></span>
+
+        <div class="hero-next" id="heroNext"></div>
+
+        <div class="hero-wave" aria-hidden="true">
+            <svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,40 C240,80 480,0 720,30 C960,60 1200,10 1440,40 L1440,70 L0,70 Z"/></svg>
         </div>
     </section>
 
@@ -282,10 +312,66 @@
                         <span class="mes">NOV</span>
                     </div>
                     <div class="evento-info">
-                        <h3>Presentación en Romeral</h3>
+                        <h3>Fiesta de la Primavera</h3>
                         <p class="evento-lugar">📍 Romeral</p>
-                        <p class="evento-hora">🕐 19:00 hrs</p>
-                        <div class="countdown" data-target="2026-11-21T19:00:00"></div>
+                        <p class="evento-hora">🕐 20:00 hrs</p>
+                        <div class="countdown" data-target="2026-11-21T20:00:00"></div>
+                    </div>
+                </div>
+                <div class="evento-card fade-in">
+                    <div class="evento-fecha">
+                        <span class="dia">27</span>
+                        <span class="mes">NOV</span>
+                    </div>
+                    <div class="evento-info">
+                        <h3>Desfile Aniversario Comuna de Maule</h3>
+                        <p class="evento-lugar">📍 Maule</p>
+                        <p class="evento-hora">🕐 17:00 hrs</p>
+                        <div class="countdown" data-target="2026-11-27T17:00:00"></div>
+                    </div>
+                </div>
+                <div class="evento-card fade-in" data-fecha="2026-11-28">
+                    <div class="evento-fecha">
+                        <span class="dia">28</span>
+                        <span class="mes">NOV</span>
+                    </div>
+                    <div class="evento-info">
+                        <h3>Carnaval de Curicó</h3>
+                        <p class="evento-lugar">📍 Curicó</p>
+                        <p class="evento-tbd">🕐 Hora por confirmar</p>
+                    </div>
+                </div>
+                <div class="evento-card fade-in" data-fecha="2026-12-04">
+                    <div class="evento-fecha">
+                        <span class="dia">4</span>
+                        <span class="mes">DIC</span>
+                    </div>
+                    <div class="evento-info">
+                        <h3>Jornada Folclórica</h3>
+                        <p class="evento-lugar">📍 Pencahue</p>
+                        <p class="evento-tbd">🕐 Hora por confirmar</p>
+                    </div>
+                </div>
+                <div class="evento-card fade-in" data-fecha="2026-12-12">
+                    <div class="evento-fecha">
+                        <span class="dia">12</span>
+                        <span class="mes">DIC</span>
+                    </div>
+                    <div class="evento-info">
+                        <h3>Presentación en Chillán</h3>
+                        <p class="evento-lugar">📍 Chillán</p>
+                        <p class="evento-tbd">🕐 Hora por confirmar</p>
+                    </div>
+                </div>
+                <div class="evento-card fade-in" data-fecha="2026-12-19">
+                    <div class="evento-fecha">
+                        <span class="dia">19</span>
+                        <span class="mes">DIC</span>
+                    </div>
+                    <div class="evento-info">
+                        <h3>Procesión de la Virgen</h3>
+                        <p class="evento-lugar">📍 Maule</p>
+                        <p class="evento-tbd">🕐 Hora por confirmar</p>
                     </div>
                 </div>
             </div>
