@@ -182,5 +182,59 @@ function updateCountdowns() {
     });
 }
 
+// Eventos del home: oculta los vencidos, muestra solo los próximos 3 y copia el primero al Hero
+function syncEventosHome() {
+    const now = Date.now();
+    const MAX_VISIBLES = 3;
+    const grid = document.querySelector('#eventos .eventos-grid');
+    let upcoming = null;
+
+    if (grid) {
+        let visibles = 0;
+
+        grid.querySelectorAll('.evento-card').forEach(card => {
+            const cd = card.querySelector('.countdown');
+            let fin = null;
+
+            if (cd) {
+                fin = new Date(cd.getAttribute('data-target')).getTime() + 86400000;
+            } else if (card.dataset.fecha) {
+                fin = new Date(card.dataset.fecha + 'T23:59:59').getTime();
+            }
+
+            if (fin && now > fin) {
+                card.style.display = 'none';
+                return;
+            }
+            if (visibles >= MAX_VISIBLES) {
+                card.style.display = 'none';
+                return;
+            }
+
+            visibles++;
+            if (!upcoming) upcoming = card;
+        });
+
+        if (visibles === 0) {
+            grid.innerHTML = '<p class="eventos-vacio">🎭 Pronto anunciaremos nuestras próximas presentaciones. ¡Síguenos en redes para enterarte primero!</p>';
+        }
+    }
+
+    const heroNext = document.getElementById('heroNext');
+    if (heroNext && upcoming) {
+        const cd = upcoming.querySelector('.countdown');
+        const horaEl = upcoming.querySelector('.evento-hora, .evento-tbd');
+
+        heroNext.innerHTML =
+            '<span class="hero-next-label">Próxima presentación</span>' +
+            '<div class="hero-next-date"><span class="d">' + upcoming.querySelector('.dia').textContent + '</span><span class="m">' + upcoming.querySelector('.mes').textContent + '</span></div>' +
+            '<div class="hero-next-info"><strong>' + upcoming.querySelector('h3').textContent + '</strong><span>' + upcoming.querySelector('.evento-lugar').textContent + (horaEl ? ' · ' + horaEl.textContent : '') + '</span></div>' +
+            (cd ? '<div class="countdown" data-target="' + cd.getAttribute('data-target') + '"></div>' : '');
+
+        heroNext.classList.add('show');
+    }
+}
+
+syncEventosHome();
 updateCountdowns();
 setInterval(updateCountdowns, 60000);
